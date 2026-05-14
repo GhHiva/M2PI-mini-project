@@ -428,7 +428,7 @@ Higher difference:
 
 # Complete Pipeline
 
-[
+$$
 \text{Image}
 \rightarrow
 \text{Neural Network}
@@ -438,7 +438,7 @@ Higher difference:
 \text{Probabilities}
 \rightarrow
 \text{Cross Entropy Loss}
-]
+$$
 
 ---
 
