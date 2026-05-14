@@ -5,7 +5,7 @@ Deep learning is a branch of machine learning that uses **neural networks with m
 
 The word **“deep”** refers to the large number of layers between the input and the output.
 
-![NN](image/NN.png)
+![NN](main/image/NN.png)
 ---
 
 ## Simple Intuition
