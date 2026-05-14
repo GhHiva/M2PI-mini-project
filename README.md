@@ -1,7 +1,7 @@
 # M2PI-mini-project
 
 <p align="center">
-<img src="m2pi.png" alt="AI vs ML vs DL vs Data Science" width="400"/>
+<img src="image/m2pi.png" alt="AI vs ML vs DL vs Data Science" width="400"/>
 <img src="fan.png" alt="ocean" width="400"/>
 </p>
 
