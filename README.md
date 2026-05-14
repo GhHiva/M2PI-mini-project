@@ -14,7 +14,7 @@ That is actually a very good question.
 
 Before we jump into Computer Vision and deep learning models like **YOLO**, we first need to understand the dataset we are going to work with throughout this workshop.
 
-The dataset we will use is called [FathomNet]([(https://www.fathomnet.org/news/open-data-opens-new-opportunities)](https://www.fathomnet.org/news/open-data-opens-new-opportunities)).
+The dataset we will use is called [FathomNet](https://www.fathomnet.org/news/open-data-opens-new-opportunities).
 FathomNet is a large underwater image database designed to help researchers, scientists, and machine learning engineers study ocean life using artificial intelligence.
 
 The dataset contains:
