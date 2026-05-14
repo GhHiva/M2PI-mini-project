@@ -70,25 +70,25 @@ The model starts with random parameters.
 
 It predicts:
 
-[\
+$$
 \hat{y}=f(x;\theta)
-]\
+$$
 
 where:
 
-* (\theta) = parameters (weights)
+* $(\theta)$ = parameters (weights)
 
 The prediction error is measured using a [loss function](https://www.ibm.com/think/topics/loss-function):
 
-\[
+$$
 L(\theta)
-\]
+$$
 
 Then optimization updates parameters using [gradient descent](https://www.ibm.com/think/topics/gradient-descent):
 
-\[
+$$
 \theta_{t+1}=\theta_t-\eta\nabla L(\theta_t)
-\]
+$$
 
 The network gradually improves through repeated updates.
 
@@ -110,9 +110,9 @@ The network gradually improves through repeated updates.
 
 YOLO is a deep learning model specialized for:
 
-\[
+$$
 \textbf{Object Detection}
-\]
+$$
 
 It uses deep neural networks to:
 
@@ -180,9 +180,9 @@ but not:
 
 Semantic segmentation is essentially:
 
-\[
+$$
 f(x,y) \rightarrow c
-\]
+$$
 
 where:
 
@@ -201,7 +201,7 @@ The model performs pixel-wise classification.
 * Underwater habitat analysis
 
 
-![ss](image/semantic segmentation.png)
+![ss](image/s_segmentation.png)
 ---
 
 ## 3. Instance Segmentation
