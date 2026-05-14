@@ -200,6 +200,8 @@ The model performs pixel-wise classification.
 * Road detection
 * Underwater habitat analysis
 
+
+![ss](semantic segmentation.png)
 ---
 
 ## 3. Instance Segmentation
@@ -219,7 +221,7 @@ It not only classifies pixels, but also separates individual objects.
 
 Suppose an image contains:
 
-* 3 fish
+* 3 people
 
 Semantic segmentation:
 
@@ -235,17 +237,7 @@ Each object receives its own mask. This is matter when:
 * multiple similar objects exist
 * counting objects is necessary
 
----
-
-### Mathematical Perspective
-
-Instance segmentation solves:
-
-1. localization
-2. classification
-3. pixel separation
-
-simultaneously.
+![is](Instance segmentation.png)
 
 ---
 
