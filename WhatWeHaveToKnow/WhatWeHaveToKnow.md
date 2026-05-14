@@ -43,7 +43,7 @@ where:
 * $f$ = activation function
 
 
-![NNM1](image/NNM1.png)
+![NNM1](../image/NNM1.png)
 ---
 
 ## Mathematical Perspective
@@ -194,7 +194,7 @@ The model performs pixel-wise classification.
 * Underwater habitat analysis
 
 
-![ss](image/s_segmentation.png)
+![ss](image/s_segmentation)
 ---
 
 ## 1.3. Instance Segmentation
@@ -230,7 +230,7 @@ Each object receives its own mask. This is matter when:
 * multiple similar objects exist
 * counting objects is necessary
 
-![is](image/i_segmentation.png)
+![is](../image/i_segmentation.png)
 
 ---
 
@@ -281,7 +281,7 @@ Binary masks:
 * improve training quality
 * help compute object boundaries
 
-![bi](image/binary.png)
+![bi](../image/binary.png)
 
 ---
 
