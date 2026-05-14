@@ -18,8 +18,8 @@ $$
 
 where:
 
-* (x) = input data
-* (y) = desired output
+* $x$ = input data
+* $y$ = desired output
 
 Examples:
 
@@ -40,22 +40,23 @@ Neural networks were loosely inspired by biological neurons.
 
 A single artificial neuron performs:
 
-[
+$$
 y = \sigma(wx+b)
-]
+$$
 
 where:
 
-* (x) = input
-* (w) = weight
-* (b) = bias
-* (\sigma) = activation function
+* $x$ = input
+* $w$ = weight
+* $b$ = bias
+* $\sigma$ = activation function
 
 This is essentially:
 
 1. a linear transformation
 2. followed by a nonlinear function
 
+![NNM](NNM.png)
 ---
 
 # What Makes It “Deep”?
