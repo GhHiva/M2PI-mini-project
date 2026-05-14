@@ -50,16 +50,16 @@ Humans can naturally look at an image and recognize:
 
 The challenge is:
 
-How can we teach a machine to understand those numerical patterns and recognize meaningful objects?
+> How can we teach a machine to understand those numerical patterns and recognize meaningful objects?
 
 This is where Machine Learning and Deep Learning become important.
 
 
-What Are We Going to Do?
+## What Are We Going to Do?
 
 In this project, we will use a deep learning object detection model called:
 
-YOLO (You Only Look Once)
+**YOLO (You Only Look Once)**
 
 YOLO is a Computer Vision model that can:
 
@@ -69,11 +69,11 @@ YOLO is a Computer Vision model that can:
 
 For example, instead of simply saying:
 
-“There is a fish in this image”
+> “There is a fish in this image”
 
 YOLO can say:
 
-“There is a fish located here, with these coordinates, and I am 95% confident about it.”
+> “There is a fish located here, with these coordinates, and I am 95% confident about it.”
 
 So throughout this workshop, we will learn how to:
 
