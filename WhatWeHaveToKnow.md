@@ -4,16 +4,16 @@
 Deep learning is a branch of machine learning that uses **neural networks with many layers** to learn patterns from data.
 
 The word **“deep”** refers to the large number of layers between the input and the output.
-
+![NN](NN.png)
 ---
 
 # Simple Intuition
 
 A deep learning model tries to learn a function:
 
-[
+$$
 f(x) \approx y
-]
+$$
 
 where:
 
