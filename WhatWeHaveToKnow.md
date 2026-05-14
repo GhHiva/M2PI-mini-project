@@ -27,7 +27,7 @@ Here, we aim to minimize the error between the actual value and the predicted (a
 
 ## Why Is It Called a Neural Network?
 
-Neural networks were inspired by biological neurons.
+[Neural networks](https://www.ibm.com/think/topics/neural-networks) were inspired by biological neurons.
 
 A single artificial neuron performs:
 
@@ -104,7 +104,7 @@ The network gradually improves through repeated updates.
 
 ## Connection to YOLO
 
-YOLO is a deep learning model specialized for `\textbf{Object Detection}`. It uses deep neural networks to:
+YOLO is a deep learning model specialized for `$\textbf{Object Detection}$`. It uses deep neural networks to:
 
   * understand image features
   * detect objects
