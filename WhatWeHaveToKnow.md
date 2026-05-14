@@ -5,7 +5,7 @@ Deep learning is a branch of machine learning that uses **neural networks with m
 
 The word **“deep”** refers to the large number of layers between the input and the output.
 
-![NN](NN.png)
+![NN](image/NN.png)
 ---
 
 # Simple Intuition
@@ -47,7 +47,7 @@ This is essentially:
 1. a linear transformation
 2. followed by a nonlinear function
 
-![NNM1](NNM1.png)
+![NNM1](image/NNM1.png)
 ---
 
 # Mathematical Perspective
@@ -201,7 +201,7 @@ The model performs pixel-wise classification.
 * Underwater habitat analysis
 
 
-![ss](semantic segmentation.png)
+![ss](image/semantic segmentation.png)
 ---
 
 ## 3. Instance Segmentation
@@ -237,7 +237,7 @@ Each object receives its own mask. This is matter when:
 * multiple similar objects exist
 * counting objects is necessary
 
-![is](Instance segmentation.png)
+![is](image/instance segmentation.png)
 
 ---
 
