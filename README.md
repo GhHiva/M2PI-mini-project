@@ -45,7 +45,7 @@ Humans can naturally look at an image and recognize:
 - rocks
 - underwater plants
 
-> But for a computer, an image is only a large matrix of numbers representing pixel values.
+>  <font color="red">But for a computer, an image is only a large matrix of numbers representing pixel values.!</font>
 
 The challenge is:
 
