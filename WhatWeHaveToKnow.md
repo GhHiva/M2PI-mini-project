@@ -56,7 +56,7 @@ This is essentially:
 1. a linear transformation
 2. followed by a nonlinear function
 
-![NNM](NNM.png)
+![NNM1](NNM1.png)
 ---
 
 # What Makes It “Deep”?
