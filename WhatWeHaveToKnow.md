@@ -104,7 +104,7 @@ The network gradually improves through repeated updates.
 
 ## Connection to [YOLO](https://docs.ultralytics.com/)
 
-YOLO is a deep learning model specialized for `$\textbf{Object Detection}$`. It uses deep neural networks to:
+YOLO is a deep learning model specialized for `**Object Detection**`. It uses deep neural networks to:
 
   * understand image features
   * detect objects
@@ -355,7 +355,7 @@ Instead of segmenting everything automatically, the user provides guidance.
 
 ### What is SAM?
 
-SAM stands for $\textbf{Segment Anything Model}$. it Developed for highly flexible segmentation tasks. Modern versions include:
+SAM stands for **Segment Anything Model**. it Developed for highly flexible segmentation tasks. Modern versions include:
 
 * SAM
 * SAM2
