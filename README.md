@@ -5,7 +5,7 @@ Posted by Tieme, modified by community. See post 'Timeline' for change history
 Retrieved 2026-05-14, License - CC BY-SA 4.0
 -->
 
-<img src="m2pi.png" alt="AI vs ML vs DL vs Data Science" width="200"/>
+<img src="m2pi.png" alt="AI vs ML vs DL vs Data Science" width="400"/>
 
 
 
