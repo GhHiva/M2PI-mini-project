@@ -281,7 +281,7 @@ Binary masks:
 * improve training quality
 * help compute object boundaries
 
-![binary](binary.png)
+![bi](image/binary.png)
 
 ---
 
