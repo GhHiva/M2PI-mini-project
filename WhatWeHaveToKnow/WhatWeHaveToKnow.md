@@ -194,7 +194,7 @@ The model performs pixel-wise classification.
 * Underwater habitat analysis
 
 
-![ss](image/s_segmentation)
+![ss](../image/s_segmentation)
 ---
 
 ## 1.3. Instance Segmentation
