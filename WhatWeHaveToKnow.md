@@ -21,35 +21,26 @@ where:
 * $x$ = input data
 * $y$ = desired output
 
-Examples:
-
-| Input        | Output       |
-| ------------ | ------------ |
-| image        | object label |
-| sound        | spoken words |
-| sentence     | translation  |
-| medical scan | diagnosis    |
-
-The model learns this mapping automatically from examples.
+Here, we aim to minimize the error between the actual value and the predicted (approximated) value.
 
 ---
 
 # Why Is It Called a Neural Network?
 
-Neural networks were loosely inspired by biological neurons.
+Neural networks were inspired by biological neurons.
 
 A single artificial neuron performs:
 
 $$
-y = \sigma(wx+b)
+y = f(w^Tx+b)
 $$
 
 where:
 
 * $x$ = input
-* $w$ = weight
+* $w^T$ = weight
 * $b$ = bias
-* $\sigma$ = activation function
+* $f$ = activation function
 
 This is essentially:
 
@@ -57,50 +48,6 @@ This is essentially:
 2. followed by a nonlinear function
 
 ![NNM1](NNM1.png)
----
-
-# What Makes It “Deep”?
-
-A shallow network may have:
-
-* one hidden layer
-
-A deep network has:
-
-* many hidden layers
-
-Example:
-
-[
-f(x)=f_5(f_4(f_3(f_2(f_1(x)))))
-]
-
-Each layer learns increasingly complex patterns.
-
----
-
-# Example with Images
-
-Suppose the model detects fish underwater.
-
-Early layers learn:
-
-* edges
-* lines
-* corners
-
-Middle layers learn:
-
-* fins
-* textures
-* shapes
-
-Deep layers learn:
-
-* full fish structures
-
-This hierarchy is one of the main strengths of deep learning.
-
 ---
 
 # Mathematical Perspective
@@ -123,66 +70,27 @@ The model starts with random parameters.
 
 It predicts:
 
-[
+\[
 \hat{y}=f(x;\theta)
-]
+\]
 
 where:
 
 * (\theta) = parameters (weights)
 
-The prediction error is measured using a loss function:
+The prediction error is measured using a [loss function](https://www.ibm.com/think/topics/loss-function):
 
-[
+\[
 L(\theta)
-]
+\]
 
-Then optimization updates parameters using gradient descent:
+Then optimization updates parameters using [gradient descent](https://www.ibm.com/think/topics/gradient-descent):
 
-[
+\[
 \theta_{t+1}=\theta_t-\eta\nabla L(\theta_t)
-]
+\]
 
 The network gradually improves through repeated updates.
-
----
-
-# Difference Between Traditional Programming and Deep Learning
-
-## Traditional Programming
-
-Programmer writes rules manually.
-
-Example:
-
-```python
-if object_has_fins:
-    print("fish")
-```
-
-This becomes difficult for complex problems.
-
----
-
-## Deep Learning
-
-Instead of writing rules manually:
-
-* give the model examples
-* let it learn patterns automatically
-
-The model discovers its own internal rules.
-
----
-
-# Why Deep Learning Became Powerful
-
-Deep learning became successful because of:
-
-1. Large datasets
-2. Faster GPUs
-3. Better algorithms
-4. More computational power
 
 ---
 
@@ -198,13 +106,13 @@ Deep learning became successful because of:
 
 ---
 
-# Connection to YOLO
+## Connection to YOLO
 
 YOLO is a deep learning model specialized for:
 
-[
+\[
 \textbf{Object Detection}
-]
+\]
 
 It uses deep neural networks to:
 
@@ -232,7 +140,7 @@ In underwater computer vision tasks, segmentation is extremely useful because ma
 
 # 1. What is Segmentation?
 
-Before discussing different segmentation methods, students should first understand the main idea.
+Before discussing different segmentation methods.
 
 Object detection answers:
 
@@ -247,23 +155,11 @@ Instead of drawing only a rectangle around an object, segmentation attempts to i
 
 ---
 
-# 2. Semantic Segmentation
+## 2. Semantic Segmentation
 
-## Main Idea
+### Main Idea
 
-Semantic segmentation classifies **every pixel** in an image into a category.
-
-For example:
-
-* all fish pixels → fish
-* all coral pixels → coral
-* all water pixels → background
-
----
-
-## Important Property
-
-Semantic segmentation does **not** distinguish between separate objects of the same class.
+Semantic segmentation classifies **every pixel** in an image into a category. Semantic segmentation does **not** distinguish between separate objects of the same class.
 
 Example:
 
@@ -272,11 +168,11 @@ Example:
 
 The model knows:
 
-* “these pixels belong to fish”
+* “these pixels belong to person”
 
 but not:
 
-* “this is fish #1 and this is fish #2”
+* “this is person #1 and this is person #2”
 
 ---
 
@@ -284,14 +180,14 @@ but not:
 
 Semantic segmentation is essentially:
 
-[
+\[
 f(x,y) \rightarrow c
-]
+\]
 
 where:
 
-* ((x,y)) = pixel location
-* (c) = class label
+* $x,y$ = pixel location
+* $c$ = class label
 
 The model performs pixel-wise classification.
 
@@ -306,9 +202,9 @@ The model performs pixel-wise classification.
 
 ---
 
-# 3. Instance Segmentation
+## 3. Instance Segmentation
 
-## Main Idea
+### Main Idea
 
 Instance segmentation combines:
 
@@ -327,21 +223,13 @@ Suppose an image contains:
 
 Semantic segmentation:
 
-* labels all fish pixels together
+* labels all person pixels together
 
 Instance segmentation:
 
-* separates fish #1
-* fish #2
-* fish #3
+* separates person #1, person #2, and person #3
 
-Each object receives its own mask.
-
----
-
-## Why It Matters
-
-This is extremely important when:
+Each object receives its own mask. This is matter when:
 
 * objects overlap
 * multiple similar objects exist
@@ -349,7 +237,7 @@ This is extremely important when:
 
 ---
 
-## Mathematical Perspective
+### Mathematical Perspective
 
 Instance segmentation solves:
 
