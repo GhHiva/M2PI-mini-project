@@ -38,7 +38,7 @@ and shows where the model:
 
 ---
 
-# Binary Classification Confusion Matrix
+## Binary Classification Confusion Matrix
 
 For a two-class problem:
 
@@ -49,7 +49,7 @@ For a two-class problem:
 
 ---
 
-# Mathematical Intuition
+## Mathematical Intuition
 
 The confusion matrix is essentially a counting matrix.
 
@@ -57,13 +57,13 @@ It counts how predictions are distributed across categories.
 
 For example:
 
-[
+$$
 C=
-\begin{bmatrix}
-50 & 5 \
+\begin{pmatrix}
+50 & 5 \\
 3 & 42
-\end{bmatrix}
-]
+\end{pmatrix}
+$$
 
 Interpretation:
 
@@ -83,7 +83,7 @@ This means:
 
 ---
 
-# Geometry of the Confusion Matrix
+## Geometry of the Confusion Matrix
 
 The diagonal entries represent:
 
@@ -91,7 +91,7 @@ The diagonal entries represent:
 
 Off-diagonal entries represent:
 
-* errors
+* errors (Error Type I and Error Type II)
 * confusion between classes
 
 A perfect classifier produces a matrix with:
@@ -101,13 +101,13 @@ A perfect classifier produces a matrix with:
 
 ---
 
-# Important Metrics Derived from the Confusion Matrix
+## Important Metrics Derived from the Confusion Matrix
 
-## Precision
+### Precision
 
-[
+$$
 Precision = \frac{TP}{TP+FP}
-]
+$$
 
 Measures:
 
@@ -115,11 +115,11 @@ Measures:
 
 ---
 
-## Recall
+### Recall
 
-[
+$$
 Recall = \frac{TP}{TP+FN}
-]
+$$
 
 Measures:
 
@@ -127,28 +127,28 @@ Measures:
 
 ---
 
-## Accuracy
+### Accuracy
 
-[
+$$
 Accuracy = \frac{TP+TN}{TP+TN+FP+FN}
-]
+$$
 
 Measures overall correctness.
 
 ---
 
-# Multi-Class Confusion Matrix
+## Multi-Class Confusion Matrix
 
 For multiple classes:
 
-[
+$$
 C=
-\begin{bmatrix}
+\begin{pmatrix}
 45 & 2 & 1 \
 4 & 39 & 3 \
 0 & 5 & 41
-\end{bmatrix}
-]
+\end{pmatrix}
+$$
 
 Each row:
 
@@ -164,72 +164,46 @@ This matrix helps identify which classes are commonly confused.
 
 # 2. Softmax
 
-Softmax is a mathematical function that converts raw neural network outputs into probabilities.
+Softmax is a mathematical function that converts raw neural network outputs into probabilities. In Deep Learning, activation functions are important because they introduce non-linearity into neural networks allowing them to learn complex patterns. Softmax Activation Function transforms a vector of numbers into a probability distribution, where each value represents the likelihood of a particular class. It is especially important for multi-class classification problems.
 
-Neural networks usually output arbitrary values called:
+* Each output value lies between 0 and 1.
+* The sum of all output values equals 1.
+  
+This property makes Softmax ideal for scenarios where each output neuron represents the probability of a distinct class. For a given vector
+$$
+Z= [z_1,z_2,\dots,z_n]
+$$
+the Softmax function transforms it into probability values:
 
-[
-z_1,z_2,\dots,z_n
-]
-
-These are often called:
-
-* logits
-* scores
-
-They are not probabilities.
-
-Softmax transforms them into probability values between:
-
-[
-0 \le P_i \le 1
-]
-
-such that:
-
-[
-\sum_i P_i = 1
-]
+$$
+P(z=i)=\frac{e^{z_i}}{\sum_{j=1}^{n} e^{z_j}}
+$$
 
 ---
 
-# Softmax Equation
-
-[
-P(y=i)=\frac{e^{z_i}}{\sum_j e^{z_j}}
-]
-
-where:
-
-* (z_i) = score for class (i)
-* exponentials amplify differences
-* denominator normalizes outputs
-
----
-
-# Mathematical Intuition
+## Mathematical Intuition
 
 Softmax converts a vector:
 
-[
+$$
 \mathbf{z}=
-\begin{bmatrix}
+\begin{pmatrix}
 2.0 \
 1.0 \
 0.1
-\end{bmatrix}
-]
+\end{pmatrix}
+$$
 
 into a probability distribution:
 
-[
+$$
 \mathbf{p}=
-\begin{bmatrix}
+\begin{pmatrix}
 0.66 \
 0.24 \
 0.10
-\end{bmatrix}
-]
+\end{pmatrix}
+$$
 
 Interpretation:
 
@@ -237,35 +211,10 @@ Interpretation:
 * 24% probability for class 2
 * 10% probability for class 3
 
----
-
-# Why Exponentials?
-
-Exponentials magnify larger values.
-
-For example:
-
-[
-e^3 >> e^1
-]
-
-This helps the network emphasize the most likely class.
 
 ---
 
-# Geometric Interpretation
-
-Softmax maps arbitrary vectors into a probability simplex.
-
-This means:
-
-* outputs become normalized
-* all probabilities sum to 1
-* predictions become interpretable probabilistically
-
----
-
-# Connection to Probability Theory
+## Connection to Probability Theory
 
 Softmax allows neural networks to express:
 
@@ -281,7 +230,7 @@ The model can say:
 
 # 3. Cross Entropy
 
-Cross entropy is a loss function used to measure the difference between:
+Cross entropy is a [loss function](https://www.ibm.com/think/topics/loss-function) used to measure the difference between:
 
 * true probability distributions
 * predicted probability distributions
@@ -292,72 +241,41 @@ It tells us:
 
 ---
 
-# Binary Cross Entropy Equation
+## Binary Cross Entropy Equation
 
-[
+$$
 L = -[y\log(p)+(1-y)\log(1-p)]
-]
+$$
 
 where:
 
-* (y) = true label
-* (p) = predicted probability
+* y = true label
+* p = predicted probability
 
 ---
 
-# Mathematical Intuition
+## Mathematical Intuition
 
 Suppose:
+True label is $y=1$ and the prediction is $p=0.99$. Then:
 
-True label:
-
-[
-y=1
-]
-
-Prediction:
-
-[
-p=0.99
-]
-
-Then:
-
-[
+$$
 L \approx 0
-]
+$$
 
 Very small loss because the prediction is correct.
 
 ---
 
-Now suppose:
-
-[
-p=0.01
-]
-
-Then:
-
-[
-L
-]
+Now suppose $p=0.01$. Then 
+$$
+L \approx 1
+$$
 
 becomes very large.
 
 The model receives a strong penalty for confident incorrect predictions.
 
----
-
-# Why Logarithms?
-
-Logarithms provide:
-
-* smooth gradients
-* strong penalties for confident mistakes
-* stable optimization behavior
-
-This is extremely important for gradient descent.
 
 ---
 
@@ -365,40 +283,40 @@ This is extremely important for gradient descent.
 
 For multiple classes:
 
-[
+$$
 L=-\sum_i y_i\log(p_i)
-]
+$$
 
 where:
 
-* (y_i) = true distribution
-* (p_i) = predicted probability
+* y_i = true distribution
+* p_i = predicted probability
 
 ---
 
-# Example
+## Example
 
 Suppose the true class is:
 
-[
+$$
 \mathbf{y}=
-\begin{bmatrix}
-1 \
-0 \
+\begin{pmatrix}
+1 \\
+0 \\
 0
-\end{bmatrix}
-]
+\end{pmatrix}
+$$
 
 and predicted probabilities are:
 
-[
+$$
 \mathbf{p}=
-\begin{bmatrix}
-0.7 \
-0.2 \
+\begin{pmatrix}
+0.7 \\
+0.2 \\
 0.1
-\end{bmatrix}
-]
+\end{pmatrix}
+$$
 
 Cross entropy measures how different these vectors are.
 
@@ -418,50 +336,38 @@ These concepts usually work together.
 
 ---
 
-# Step 1 — Neural Network Outputs Scores
+**Step 1 — Neural Network Outputs Scores**
 
-The neural network first produces raw numerical outputs called:
+The neural network first produces raw numerical outputs like
 
-* logits
-* scores
-
-Example:
-
-[
+$$
 \mathbf{z}=
-\begin{bmatrix}
-2.0 \
-1.0 \
+\begin{pmatrix}
+2.0 \\
+1.0 \\
 0.1
-\end{bmatrix}
-]
+\end{pmatrix}
+$$
 
-These values are not probabilities.
 
-They are simply numerical scores representing how strongly the network believes each class may be correct.
-
----
-
-# Step 2 — Softmax Converts Scores into Probabilities
+**Step 2 — Softmax Converts Scores into Probabilities**
 
 Softmax transforms the score vector into probabilities:
 
-[
+$$
 \mathbf{z}
 \rightarrow
-\mathbf{p}
-]
-
-Example:
-
-[
+\mathbf{p};
+$$
+ 
+$$
 \mathbf{p}=
-\begin{bmatrix}
-0.66 \
-0.24 \
+\begin{pmatrix}
+0.66 \\
+0.24 \\
 0.10
-\end{bmatrix}
-]
+\end{pmatrix}
+$$
 
 Now:
 
@@ -485,25 +391,25 @@ Cross entropy compares:
 
 Suppose the correct class is:
 
-[
+$$
 \mathbf{y}=
-\begin{bmatrix}
-1 \
-0 \
+\begin{pmatrix}
+1 \\
+0 \\
 0
-\end{bmatrix}
-]
+\end{pmatrix}
+$$
 
 and the model predicted:
 
-[
+$$
 \mathbf{p}=
-\begin{bmatrix}
-0.66 \
-0.24 \
+\begin{pmatrix}
+0.66 \\
+0.24 \\
 0.10
-\end{bmatrix}
-]
+\end{pmatrix}
+$$
 
 Cross entropy computes how far these probability distributions are from each other.
 
@@ -526,8 +432,6 @@ Higher difference:
 \rightarrow
 \text{Neural Network}
 \rightarrow
-\text{Scores}
-\rightarrow
 \text{Softmax}
 \rightarrow
 \text{Probabilities}
@@ -541,22 +445,10 @@ Higher difference:
 
 In YOLO:
 
-* softmax or sigmoid-like activations generate class probabilities
+* [softmax](https://www.geeksforgeeks.org/deep-learning/the-role-of-softmax-in-neural-networks-detailed-explanation-and-applications/) or (sigmoid-like)[https://www.geeksforgeeks.org/machine-learning/derivative-of-the-sigmoid-function/] activations generate class probabilities
 * cross entropy helps train classification components
 * confusion matrices evaluate prediction quality
 
-These ideas are fundamental to modern object detection systems.
-
----
-
-# Mathematical Connections
-
-| Concept          | Mathematical Area                 |
-| ---------------- | --------------------------------- |
-| Confusion Matrix | Statistics                        |
-| Softmax          | Probability & Exponentials        |
-| Cross Entropy    | Information Theory & Optimization |
-| Gradient Descent | Calculus & Optimization           |
 
 ---
 
