@@ -70,9 +70,9 @@ The model starts with random parameters.
 
 It predicts:
 
-\[
+[\
 \hat{y}=f(x;\theta)
-\]
+]\
 
 where:
 
