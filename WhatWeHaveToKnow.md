@@ -301,7 +301,7 @@ representing confidence levels.
 
 ---
 
-##$ Example
+### Example
 
 $$
 \begin{pmatrix}
