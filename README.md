@@ -8,7 +8,7 @@
 
 Maybe you asked yourself:
 
-“What exactly are Computer Vision and FathomNet? And what are we trying to do in this project?”
+**`“What exactly are Computer Vision and FathomNet? And what are we trying to do in this project?”`**
 
 That is actually a very good question.
 
