@@ -332,12 +332,7 @@ They are often used internally during neural network optimization.
 
 ### Probability Connection
 
-Soft masks are closely related to probability theory. Each pixel prediction can be viewed as:
-
-$$
-P(\text{object at pixel})
-$$
-
+Soft masks are closely related to probability theory. Each pixel prediction can be viewed as **P(object at pixel)**.
 
 ---
 
