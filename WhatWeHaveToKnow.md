@@ -131,7 +131,7 @@ In underwater computer vision tasks, segmentation is extremely useful because ma
 
 ---
 
-# 1. What is Segmentation?
+## 1. What is Segmentation?
 
 Before discussing different segmentation methods.
 
@@ -148,7 +148,7 @@ Instead of drawing only a rectangle around an object, segmentation attempts to i
 
 ---
 
-## 2. Semantic Segmentation
+## 1.2. Semantic Segmentation
 
 ### Main Idea
 
@@ -197,7 +197,7 @@ The model performs pixel-wise classification.
 ![ss](image/s_segmentation.png)
 ---
 
-## 3. Instance Segmentation
+## 1.3. Instance Segmentation
 
 ### Main Idea
 
@@ -210,7 +210,7 @@ It not only classifies pixels, but also separates individual objects.
 
 ---
 
-## Example
+### Example
 
 Suppose an image contains:
 
@@ -234,17 +234,17 @@ Each object receives its own mask. This is matter when:
 
 ---
 
-# 4. Binary Masks
+## 1.4. Binary Masks
 
-## Main Idea
+### Main Idea
 
 A binary mask is the simplest form of segmentation.
 
 Each pixel can only take two values:
 
-[
+$$
 0 \quad \text{or} \quad 1
-]
+$$
 
 where:
 
@@ -253,9 +253,9 @@ where:
 
 ---
 
-## Example
+### Example
 
-A fish mask may look like:
+A brain mask may look like:
 
 [
 \begin{bmatrix}
@@ -267,7 +267,7 @@ A fish mask may look like:
 
 This means:
 
-* white region → fish
+* white region → brain
 * black region → background
 
 ---
@@ -281,6 +281,7 @@ Binary masks:
 * improve training quality
 * help compute object boundaries
 
+![binary](binary.png)
 ---
 
 ## Geometry Connection
