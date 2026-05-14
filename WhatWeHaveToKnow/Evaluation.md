@@ -176,7 +176,7 @@ $$
 the Softmax function transforms it into probability values:
 
 $$
-P(z=i)=\frac{e^{z_i}}{\sum_{j=1}^{n} e^{z_j}}
+f(z_i)=\frac{e^{z_i}}{\sum_{j=1}^{n} e^{z_j}}
 $$
 
 ---
@@ -188,8 +188,8 @@ Softmax converts a vector:
 $$
 \mathbf{z}=
 \begin{pmatrix}
-2.0 \
-1.0 \
+2.0 \\
+1.0 \\
 0.1
 \end{pmatrix}
 $$
@@ -199,8 +199,8 @@ into a probability distribution:
 $$
 \mathbf{p}=
 \begin{pmatrix}
-0.66 \
-0.24 \
+0.66 \\
+0.24 \\
 0.10
 \end{pmatrix}
 $$
