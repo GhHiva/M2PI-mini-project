@@ -102,7 +102,7 @@ The network gradually improves through repeated updates.
 
 ---
 
-## Connection to YOLO
+## Connection to [YOLO](https://docs.ultralytics.com/)
 
 YOLO is a deep learning model specialized for `$\textbf{Object Detection}$`. It uses deep neural networks to:
 
