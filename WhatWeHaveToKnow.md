@@ -258,11 +258,11 @@ where:
 A brain mask may look like:
 
 $$
-\begin{bmatrix}
-0 & 0 & 1 & 1 \
-0 & 1 & 1 & 1 \
+\begin{pmatrix}
+0 & 0 & 1 & 1 \\
+0 & 1 & 1 & 1 \\
 0 & 0 & 1 & 0
-\end{bmatrix}
+\end{pmatrix}
 $$
 
 This means:
@@ -304,11 +304,11 @@ representing confidence levels.
 ##$ Example
 
 $$
-\begin{bmatrix}
-0.1 & 0.2 & 0.8 \
-0.3 & 0.9 & 0.95 \
+\begin{pmatrix}
+0.1 & 0.2 & 0.8 \\
+0.3 & 0.9 & 0.95 \\
 0.1 & 0.7 & 0.2
-\end{bmatrix}
+\end{pmatrix}
 $$
 
 Interpretation:
