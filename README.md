@@ -1,4 +1,4 @@
 # M2PI-mini-project
 
 
-![description](m2pi.png)
+![AI vs ML vs DL vs Data Science](m2pi.png)
