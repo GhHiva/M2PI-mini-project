@@ -8,7 +8,7 @@ The word **“deep”** refers to the large number of layers between the input a
 ![NN](image/NN.png)
 ---
 
-# Simple Intuition
+## Simple Intuition
 
 A deep learning model tries to learn a function:
 
@@ -25,7 +25,7 @@ Here, we aim to minimize the error between the actual value and the predicted (a
 
 ---
 
-# Why Is It Called a Neural Network?
+## Why Is It Called a Neural Network?
 
 Neural networks were inspired by biological neurons.
 
@@ -42,15 +42,11 @@ where:
 * $b$ = bias
 * $f$ = activation function
 
-This is essentially:
-
-1. a linear transformation
-2. followed by a nonlinear function
 
 ![NNM1](image/NNM1.png)
 ---
 
-# Mathematical Perspective
+## Mathematical Perspective
 
 Deep learning is mainly built from:
 
@@ -64,7 +60,7 @@ Deep learning is mainly built from:
 
 ---
 
-# Core Idea of Training
+## Core Idea of Training
 
 The model starts with random parameters.
 
@@ -94,7 +90,7 @@ The network gradually improves through repeated updates.
 
 ---
 
-# Examples of Deep Learning Applications
+## Examples of Deep Learning Applications
 
 * Object detection (YOLO)
 * ChatGPT and language models
@@ -108,26 +104,23 @@ The network gradually improves through repeated updates.
 
 ## Connection to YOLO
 
-YOLO is a deep learning model specialized for:
+YOLO is a deep learning model specialized for `\textbf{Object Detection}`. It uses deep neural networks to:
 
-$$
-\textbf{Object Detection}
-$$
-
-It uses deep neural networks to:
-
-* understand image features
-* detect objects
-* predict locations
-* classify objects simultaneously
+  * understand image features
+  * detect objects
+  * predict locations
+  * classify objects simultaneously
 
 ---
 
-# Final Intuition
+## Final Intuition
 
 Deep learning can be viewed as:
 
 > A large mathematical function that learns patterns from data through optimization.
+
+----------------------------------------------------
+-----------------------------------------------------
 
 
 # Segmentation Concepts for YOLO and Computer Vision
@@ -163,8 +156,8 @@ Semantic segmentation classifies **every pixel** in an image into a category. Se
 
 Example:
 
-* 5 fish in an image
-* all fish pixels receive the same label
+* 5 people in an image
+* all persion pixels receive the same label
 
 The model knows:
 
@@ -237,7 +230,7 @@ Each object receives its own mask. This is matter when:
 * multiple similar objects exist
 * counting objects is necessary
 
-![is](image/instance segmentation.png)
+![is](image/i_segmentation.png)
 
 ---
 
