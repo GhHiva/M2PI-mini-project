@@ -144,8 +144,8 @@ For multiple classes:
 $$
 C=
 \begin{pmatrix}
-45 & 2 & 1 \
-4 & 39 & 3 \
+45 & 2 & 1 \\
+4 & 39 & 3 \\
 0 & 5 & 41
 \end{pmatrix}
 $$
@@ -164,7 +164,7 @@ This matrix helps identify which classes are commonly confused.
 
 # 2. Softmax
 
-Softmax is a mathematical function that converts raw neural network outputs into probabilities. In Deep Learning, activation functions are important because they introduce non-linearity into neural networks allowing them to learn complex patterns. Softmax Activation Function transforms a vector of numbers into a probability distribution, where each value represents the likelihood of a particular class. It is especially important for multi-class classification problems.
+Softmax is a mathematical function that converts raw neural network outputs into probabilities. In Deep Learning, activation functions are important because they introduce non-linearity into neural networks allowing them to learn complex patterns. Softmax Activation Function transforms a vector of numbers into a probability distribution, where each value represents the likelihood of a particular class. It is especially important for -class classification problems.
 
 * Each output value lies between 0 and 1.
 * The sum of all output values equals 1.
