@@ -169,7 +169,7 @@ but not:
 
 ---
 
-## Mathematical View
+### Mathematical View
 
 Semantic segmentation is essentially:
 
@@ -257,13 +257,13 @@ where:
 
 A brain mask may look like:
 
-[
+$$
 \begin{bmatrix}
 0 & 0 & 1 & 1 \
 0 & 1 & 1 & 1 \
 0 & 0 & 1 & 0
 \end{bmatrix}
-]
+$$
 
 This means:
 
@@ -272,7 +272,7 @@ This means:
 
 ---
 
-## Why Binary Masks Are Useful
+### Why Binary Masks Are Useful
 
 Binary masks:
 
@@ -282,46 +282,34 @@ Binary masks:
 * help compute object boundaries
 
 ![binary](binary.png)
----
-
-## Geometry Connection
-
-A binary mask can be interpreted as:
-
-* a region indicator function
-* a discrete geometric shape
 
 ---
 
-# 5. Soft Masks
+## 1.5. Soft Masks
 
-## Main Idea
+### Main Idea
 
 Soft masks extend binary masks.
 
-Instead of only:
+Instead of only $ 0 or 1$ pixels can take continuous values:
 
-* 0 or 1
-
-pixels can take continuous values:
-
-[
+$$
 0 \le p \le 1
-]
+$$
 
 representing confidence levels.
 
 ---
 
-## Example
+##$ Example
 
-[
+$$
 \begin{bmatrix}
 0.1 & 0.2 & 0.8 \
 0.3 & 0.9 & 0.95 \
 0.1 & 0.7 & 0.2
 \end{bmatrix}
-]
+$$
 
 Interpretation:
 
@@ -330,7 +318,7 @@ Interpretation:
 
 ---
 
-## Why Soft Masks Matter
+### Why Soft Masks Matter
 
 Soft masks:
 
@@ -342,21 +330,20 @@ They are often used internally during neural network optimization.
 
 ---
 
-## Probability Connection
+### Probability Connection
 
-Soft masks are closely related to probability theory.
+Soft masks are closely related to probability theory. Each pixel prediction can be viewed as:
 
-Each pixel prediction can be viewed as:
-
-[
+$$
 P(\text{object at pixel})
-]
+$$
+
 
 ---
 
-# 6. Promptable Segmentation (SAM / SAM2 / SAM3)
+## 1.6. Promptable Segmentation (SAM / SAM2 / SAM3)
 
-## Main Idea
+### Main Idea
 
 Promptable segmentation means:
 
@@ -366,17 +353,9 @@ Instead of segmenting everything automatically, the user provides guidance.
 
 ---
 
-# What is SAM?
+### What is SAM?
 
-SAM stands for:
-
-[
-\textbf{Segment Anything Model}
-]
-
-Developed for highly flexible segmentation tasks.
-
-Modern versions include:
+SAM stands for $\textbf{Segment Anything Model}$. it Developed for highly flexible segmentation tasks. Modern versions include:
 
 * SAM
 * SAM2
@@ -384,7 +363,7 @@ Modern versions include:
 
 ---
 
-## Types of Prompts
+### Types of Prompts
 
 The user can provide:
 
@@ -398,13 +377,13 @@ The model then predicts the segmentation mask.
 
 ---
 
-## Example
+### Example
 
-Suppose the user clicks on a fish.
+Suppose the user clicks on a person.
 
 SAM identifies:
 
-* the entire fish region
+* the entire person region
 * object boundaries
 * precise mask
 
@@ -412,21 +391,7 @@ without manual annotation.
 
 ---
 
-# Why SAM Is Powerful
-
-Traditional segmentation models:
-
-* require fixed training objectives
-
-Promptable segmentation:
-
-* adapts dynamically
-* supports interactive annotation
-* accelerates dataset labeling
-
----
-
-# Connection to YOLO
+## Connection to YOLO
 
 YOLO mainly predicts:
 
@@ -442,9 +407,10 @@ Together they can improve:
 * localization accuracy
 * fine-grained understanding
 
----
+-------------------------
+---------------
 
-# 7. Relationship Between Detection and Segmentation
+# Relationship Between Detection and Segmentation
 
 | Task                    | Output                  |
 | ----------------------- | ----------------------- |
@@ -456,7 +422,7 @@ Together they can improve:
 
 ---
 
-# 8. Why These Techniques Matter for Underwater Vision
+# Why These Techniques Matter for Underwater Vision
 
 Underwater images are difficult because of:
 
@@ -475,7 +441,7 @@ Segmentation techniques help models:
 
 ---
 
-# 9. Mathematical Connections
+# Mathematical Connections
 
 These techniques connect strongly to mathematics.
 
@@ -490,17 +456,9 @@ These techniques connect strongly to mathematics.
 
 ---
 
-# 10. Final Intuition for Students
+# Final Intuition 
 
-Bounding boxes are only a rough approximation of objects.
-
-Segmentation allows the model to move from:
-
-> “The object is somewhere here”
-
-to:
-
-> “These exact pixels belong to the object.”
+**Bounding boxes are only a rough approximation of objects. Segmentation allows the model to move from `“The object is somewhere here”` to `“These exact pixels belong to the object”`.
 
 This is one of the major steps toward more human-like visual understanding in modern AI systems.
 
