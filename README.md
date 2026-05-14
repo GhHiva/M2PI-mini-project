@@ -27,7 +27,7 @@ The dataset contains:
 So the main goal of this project is to teach a computer how to “see” and recognize objects inside underwater images.
 
 
-*What is Computer Vision?*
+## *What is Computer Vision?*
 
 Computer Vision is a field of Artificial Intelligence (AI) that enables computers to understand and analyze visual information such as:
 
