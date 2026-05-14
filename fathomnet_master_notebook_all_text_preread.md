@@ -1,10 +1,5 @@
 # FathomNet Underwater Vision Tutorial — All Text Sections (Master Notebook)
 
-This file concatenates **every markdown cell** from `fathomnet_underwater_vision_tutorial_master.ipynb` in order. Horizontal rules (`---`) separate original cells.
-
-**How to use:** read top-to-bottom, or jump to a part heading. Keywords important for newcomers are **bolded** in the body so you know what to look up before the workshop.
-
----
 
 ## Preread: look up these topics
 
