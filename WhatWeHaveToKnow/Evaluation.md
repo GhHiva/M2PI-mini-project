@@ -267,7 +267,8 @@ Very small loss because the prediction is correct.
 
 ---
 
-Now suppose $p=0.01$. Then 
+Now suppose $p=0.01$. Then:
+
 $$
 L \approx 1
 $$
@@ -445,7 +446,7 @@ Higher difference:
 
 In YOLO:
 
-* [softmax](https://www.geeksforgeeks.org/deep-learning/the-role-of-softmax-in-neural-networks-detailed-explanation-and-applications/) or (sigmoid-like)[https://www.geeksforgeeks.org/machine-learning/derivative-of-the-sigmoid-function/] activations generate class probabilities
+* [softmax](https://www.geeksforgeeks.org/deep-learning/the-role-of-softmax-in-neural-networks-detailed-explanation-and-applications/) or [sigmoid-like](https://www.geeksforgeeks.org/machine-learning/derivative-of-the-sigmoid-function/) activations generate class probabilities
 * cross entropy helps train classification components
 * confusion matrices evaluate prediction quality
 
